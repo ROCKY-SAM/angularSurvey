@@ -1,0 +1,7 @@
+<div class="myTextbox">
+    <h4>{{textObject.title}}</h4>
+    <div *ngFor="let item of textObject.items">
+        <app-text-box [textObject]="item"></app-text-box>
+    </div>
+</div>
+

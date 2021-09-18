@@ -1,0 +1,14 @@
+<h3>Survey Form</h3>
+<form>
+    <div class="card" *ngFor="let page of sampleJson.pages">
+        <h5 class="card-header">{{page.name}}</h5>
+        <div class="card-body">
+            <div *ngFor="let element of page.elements"> 
+                <app-text-box *ngIf=" element.type =='text' " [textObject]="element"></app-text-box>
+                <app-radio-group *ngIf=" element.type =='radiogroup' " [textObject]="element"></app-radio-group>
+                <app-multiple-text *ngIf=" element.type =='multipletext' " [textObject]="element"></app-multiple-text>
+                <app-matrix-box *ngIf=" element.type =='matrix' " [textObject]="element"></app-matrix-box>
+            </div>
+        </div>
+    </div>
+</form>
