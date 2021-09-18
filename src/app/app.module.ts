@@ -8,6 +8,7 @@ import { TextBoxComponent } from './survey/text-box/text-box.component';
 import { RadioGroupComponent } from './survey/radio-group/radio-group.component';
 import { MultipleTextComponent } from './survey/multiple-text/multiple-text.component';
 import { MatrixBoxComponent } from './survey/matrix-box/matrix-box.component';
+import { NgxJsonViewerModule } from 'ngx-json-viewer';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { MatrixBoxComponent } from './survey/matrix-box/matrix-box.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CommonModule
+    CommonModule,
+    NgxJsonViewerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
