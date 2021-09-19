@@ -92,6 +92,31 @@ sampleJson={
         "title": "Thank you for taking our survey. Your survey is almost complete, please enter your email address in the box below if you wish to participate in our drawing, then press the 'Submit' button."
       }
     ]
+   },
+   {
+    "name": "Section 4",
+    "elements": [
+      {
+        type: "radiogroup",
+        name: "haveKids",
+        title: "Do you have a kid(s)?",
+        isRequired: true,
+        choices: [
+            "Yes", "No"
+        ],
+        subQuestion:true,
+        subQuestionList:[
+          {
+            type: "dropdown",
+            name: "kids",
+            title: "How many kids do you have",
+            visibleIf: "{haveKids}='Yes'",
+            isRequired: true,
+            choices: [1, 2, 3, 4, 5]
+        }
+      ]
+      }, 
+    ]
    }
   ]
  };
